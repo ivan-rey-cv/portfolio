@@ -1,5 +1,4 @@
 import React from 'react'
-import { Link } from 'gatsby'
 
 import MainLayout from '../layouts/MainLayout'
 import AppHeader from '../components/AppHeader'
