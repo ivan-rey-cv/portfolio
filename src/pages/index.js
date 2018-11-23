@@ -6,7 +6,7 @@ import MainLayout from '../layouts/MainLayout'
 // import ProjectsSection from '../components/projects/ProjectsSection'
 // import About from '../components/about/About'
 
-const IndexPage = () => {
+function IndexPage() {
   const AppHeader = lazy(e => import('../components/AppHeader'))
   const FrontTitle = lazy(e => import('../components/front-title/FrontTitle'))
   const ProjectsSection = lazy(e =>
