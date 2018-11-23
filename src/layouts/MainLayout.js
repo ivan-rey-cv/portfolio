@@ -4,6 +4,8 @@ import Helmet from 'react-helmet'
 import { StaticQuery, graphql } from 'gatsby'
 import styled from 'styled-components'
 
+import '../assets/css/index.css'
+
 const Container = styled.div`
   width: 100%;
   background-color: #ffffff;

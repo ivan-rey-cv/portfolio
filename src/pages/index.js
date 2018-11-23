@@ -2,17 +2,17 @@ import React from 'react'
 import { Link } from 'gatsby'
 
 import MainLayout from '../layouts/MainLayout'
-import Image from '../components/image'
+import AppHeader from '../components/AppHeader'
+import FrontTitle from '../components/front-title/FrontTitle'
+import ProjectsSection from '../components/projects/ProjectsSection'
+import About from '../components/about/About'
 
 const IndexPage = () => (
   <MainLayout>
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <div style={{ maxWidth: '300px', marginBottom: '1.45rem' }}>
-      <Image />
-    </div>
-    <Link to="/page-2/">Go to page 2</Link>
+    <AppHeader />
+    <FrontTitle />
+    <ProjectsSection />
+    <About />
   </MainLayout>
 )
 
