@@ -8,4 +8,4 @@ const NotFoundPage = () => (
   </MainLayout>
 )
 
-export default NotFoundPage
+export default React.memo(NotFoundPage)
