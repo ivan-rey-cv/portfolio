@@ -22,7 +22,7 @@ const AboutInfo = styled.div`
     h2 {
       padding-top: 0.4rem;
       border-top: 2px solid black;
-      /* font-family: 'Lora', serif; */
+      font-family: 'Righteous', serif;
     }
   }
 
@@ -37,7 +37,7 @@ const Talk = styled.div`
   max-width: 800px;
   font-size: calc(4vw + 2vh);
   text-align: center;
-  /* font-family: 'Lora', serif; */
+  font-family: 'Righteous', serif;
 `
 
 function About(props) {
