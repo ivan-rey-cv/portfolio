@@ -12,8 +12,8 @@
     "gatsby-plugin-sharp": "^2.0.7",
     "gatsby-source-filesystem": "^2.0.4",
     "gatsby-transformer-sharp": "^2.1.4",
-    "react": "^16.5.1",
-    "react-dom": "^16.5.1",
+    "react": "^16.7.0-alpha.2",
+    "react-dom": "^16.7.0-alpha.2",
     "react-helmet": "^5.2.0",
     "react-scroll": "^1.7.10",
     "styled-components": "^4.1.1"
