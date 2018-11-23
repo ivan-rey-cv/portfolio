@@ -28,8 +28,20 @@ const MainLayout = ({ children }) => (
         <Helmet
           title={data.site.siteMetadata.title}
           meta={[
-            { name: 'description', content: 'Sample' },
-            { name: 'keywords', content: 'sample, something' },
+            {
+              name: 'description',
+              content:
+                'Ivan Rey C.V. latest portfolio website with Gatsby.js and React.',
+            },
+            {
+              name: 'author',
+              content: 'Ivan Rey C.V. <ivan.rey.c.v+portfolio@gmail.com>',
+            },
+            {
+              name: 'keywords',
+              content:
+                'portfolio, portfolio website, gastby, react, ivan-rey-cv, ',
+            },
           ]}
         >
           <html lang="en" />
