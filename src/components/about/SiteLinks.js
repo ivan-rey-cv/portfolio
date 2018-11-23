@@ -1,11 +1,11 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import DevtoSVG from '../../assets/icons/Devto'
-import FreecodecampSVG from '../../assets/icons/Freecodecamp'
-import GithubSVG from '../../assets/icons/Github'
-import GmailSVG from '../../assets/icons/Gmail'
-import HackerrankSVG from '../../assets/icons/Hackerrank'
+import DevtoSVG from '../../assets/icons/devto'
+import FreecodecampSVG from '../../assets/icons/freecodecamp'
+import GithubSVG from '../../assets/icons/github'
+import GmailSVG from '../../assets/icons/gmail'
+import HackerrankSVG from '../../assets/icons/hackerrank'
 
 const Container = styled.div`
   margin: 1rem auto 0 auto;
