@@ -1,11 +1,11 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import { ReactComponent as DevtoSVG } from '../../assets/icons/devto.svg'
-import { ReactComponent as FreecodecampSVG } from '../../assets/icons/freecodecamp.svg'
-import { ReactComponent as GithubSVG } from '../../assets/icons/github.svg'
-import { ReactComponent as GmailSVG } from '../../assets/icons/gmail.svg'
-import { ReactComponent as HackerrankSVG } from '../../assets/icons/hackerrank.svg'
+import DevtoSVG from '../../assets/icons/Devto'
+import FreecodecampSVG from '../../assets/icons/Freecodecamp'
+import GithubSVG from '../../assets/icons/Github'
+import GmailSVG from '../../assets/icons/Gmail'
+import HackerrankSVG from '../../assets/icons/Hackerrank'
 
 const Container = styled.div`
   margin: 1rem auto 0 auto;
@@ -75,7 +75,7 @@ function SiteLinks(props) {
           href={Link.link}
           key={Link.name}
         >
-          {/* <Link.svg /> */ console.log(Link.svg)}
+          <Link.svg />
           <p>{Link.name}</p>
         </a>
       ))}
