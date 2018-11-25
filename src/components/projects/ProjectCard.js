@@ -1,9 +1,3 @@
-/* intersection observer polyfill for unsupported browsers*/
-// Gatsby error: need to Wrap the import in check for window
-if (typeof window !== `undefined`) {
-  import 'intersection-observer'
-}
-
 import React, { useState, useRef, useEffect } from 'react'
 import styled from 'styled-components'
 import ProjectTitle from './ProjectTitle'
@@ -40,7 +34,7 @@ function ProjectCard(props) {
   const [inView, setInView] = useState(false)
 
   useEffect(arg => {
-    if (IntersectionObserver) {
+    if (typeof window !== `undefined`) {
       const animateNode = function(entries, observer) {
         entries.forEach(entry => {
           entry.isIntersecting ? setInView(true) : setInView(false)
@@ -50,8 +44,13 @@ function ProjectCard(props) {
         root: null,
         threshold: [0, 0.9, 1],
       }
-      const observer = new IntersectionObserver(animateNode, options)
-      observer.observe(projectNode)
+      /* polyfill for intersection-observer api
+         async import because gatsby can't reference <window object> at top level import
+      */
+      import('intersection-observer').then(res => {
+        const observer = new IntersectionObserver(animateNode, options)
+        observer.observe(projectNode)
+      })
     }
   }, [])
 
