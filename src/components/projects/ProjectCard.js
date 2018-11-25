@@ -37,20 +37,19 @@ function ProjectCard(props) {
   const [inView, setInView] = useState(false)
 
   useEffect(arg => {
-    if (IntersectionObserver) {
-      const animateNode = function(entries, observer) {
-        entries.forEach(entry => {
-          entry.isIntersecting ? setInView(true) : setInView(false)
-        })
-      }
-      const options = {
-        root: null,
-        threshold: [0, 0.9, 1],
-      }
-
-      const observer = new IntersectionObserver(animateNode, options)
-      observer.observe(projectNode)
-    }
+    // if (IntersectionObserver) {
+    //   const animateNode = function(entries, observer) {
+    //     entries.forEach(entry => {
+    //       entry.isIntersecting ? setInView(true) : setInView(false)
+    //     })
+    //   }
+    //   const options = {
+    //     root: null,
+    //     threshold: [0, 0.9, 1],
+    //   }
+    //   const observer = new IntersectionObserver(animateNode, options)
+    //   observer.observe(projectNode)
+    // }
   }, [])
 
   return (
