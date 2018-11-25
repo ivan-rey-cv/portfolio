@@ -30,6 +30,9 @@ const Container = styled.div`
       color: black;
       fill: #603063;
     }
+    &:active {
+      transform: scale(0.8);
+    }
 
     svg {
       height: 2rem;

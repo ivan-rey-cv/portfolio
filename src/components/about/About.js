@@ -5,7 +5,7 @@ import SiteLinks from './SiteLinks'
 const Container = styled.div`
   margin: 6rem auto 0 auto;
   max-width: 900px;
-  padding: 3rem 0 15rem 0;
+  padding: 3rem 0 10rem 0;
 `
 const AboutInfo = styled.div`
   display: flex;

@@ -5,6 +5,7 @@ import AppHeader from '../components/AppHeader'
 import FrontTitle from '../components/front-title/FrontTitle'
 import ProjectsSection from '../components/projects/ProjectsSection'
 import About from '../components/about/About'
+import AppFooter from '../components/AppFooter'
 
 function IndexPage() {
   return (
@@ -13,6 +14,7 @@ function IndexPage() {
       <FrontTitle />
       <ProjectsSection />
       <About />
+      <AppFooter />
     </MainLayout>
   )
 }
