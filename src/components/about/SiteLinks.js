@@ -42,14 +42,9 @@ const Container = styled.div`
 `
 const links = [
   {
-    name: 'dev.to',
-    svg: DevtoSVG,
-    link: 'https://dev.to/ivanreycv',
-  },
-  {
-    name: 'fcc',
-    svg: FreecodecampSVG,
-    link: 'https://www.freecodecamp.org/ivan-rey-c-v',
+    name: 'gmail',
+    svg: GmailSVG,
+    link: 'mailto:ivan.rey.c.v+portfolio@gmail.com',
   },
   {
     name: 'github',
@@ -57,9 +52,14 @@ const links = [
     link: 'https://github.com/ivan-rey-c-v',
   },
   {
-    name: 'gmail',
-    svg: GmailSVG,
-    link: 'mailto:ivan.rey.c.v+portfolio@gmail.com',
+    name: 'fcc',
+    svg: FreecodecampSVG,
+    link: 'https://www.freecodecamp.org/ivan-rey-c-v',
+  },
+  {
+    name: 'dev.to',
+    svg: DevtoSVG,
+    link: 'https://dev.to/ivanreycv',
   },
   {
     name: 'hackerrank',
