@@ -1,12 +1,12 @@
+/* intersection observer polyfill for unsupported browsers*/
+import 'intersection-observer'
+
 import React, { useState, useRef, useEffect } from 'react'
 import styled from 'styled-components'
 import ProjectTitle from './ProjectTitle'
 import Tag from '../Tag'
 import WebsiteSVG from '../../assets/icons/website'
 import GitSVG from '../../assets/icons/git'
-
-/* intersection observer polyfill for unsupported browsers*/
-import('intersection-observer')
 
 const Description = styled.div`
   padding: 1rem 0 0.5rem 0;
@@ -37,19 +37,19 @@ function ProjectCard(props) {
   const [inView, setInView] = useState(false)
 
   useEffect(arg => {
-    // if (IntersectionObserver) {
-    //   const animateNode = function(entries, observer) {
-    //     entries.forEach(entry => {
-    //       entry.isIntersecting ? setInView(true) : setInView(false)
-    //     })
-    //   }
-    //   const options = {
-    //     root: null,
-    //     threshold: [0, 0.9, 1],
-    //   }
-    //   const observer = new IntersectionObserver(animateNode, options)
-    //   observer.observe(projectNode)
-    // }
+    if (IntersectionObserver) {
+      const animateNode = function(entries, observer) {
+        entries.forEach(entry => {
+          entry.isIntersecting ? setInView(true) : setInView(false)
+        })
+      }
+      const options = {
+        root: null,
+        threshold: [0, 0.9, 1],
+      }
+      const observer = new IntersectionObserver(animateNode, options)
+      observer.observe(projectNode)
+    }
   }, [])
 
   return (
