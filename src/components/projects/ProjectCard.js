@@ -1,5 +1,8 @@
 /* intersection observer polyfill for unsupported browsers*/
-import 'intersection-observer'
+// Gatsby error: need to Wrap the import in check for window
+if (typeof window !== `undefined`) {
+  import 'intersection-observer'
+}
 
 import React, { useState, useRef, useEffect } from 'react'
 import styled from 'styled-components'
