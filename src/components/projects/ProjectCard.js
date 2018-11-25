@@ -37,7 +37,7 @@ function ProjectCard(props) {
   const [inView, setInView] = useState(false)
 
   useEffect(arg => {
-    if (projectNode) {
+    if (IntersectionObserver) {
       const animateNode = function(entries, observer) {
         entries.forEach(entry => {
           entry.isIntersecting ? setInView(true) : setInView(false)
