@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "ivan-rey-cv-portfolio"
+  },
+  "targets": {
+    "ivan-rey-cv-portfolio": {
+      "hosting": {
+        "portfolio": [
+          "ivan-rey-cv"
+        ]
+      }
+    }
+  }
+}
