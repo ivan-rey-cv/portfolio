@@ -38,11 +38,17 @@
         "develop": "gatsby develop",
         "start": "npm run develop",
         "format": "prettier --write \"src/**/*.js\"",
-        "test": "echo \"Error: no test specified\" && exit 1"
+        "test": "jest"
     },
     "devDependencies": {
+        "@testing-library/jest-dom": "^4.0.0",
+        "@testing-library/react": "^9.1.0",
+        "babel-jest": "^24.8.0",
+        "babel-preset-gatsby": "^0.2.8",
         "eslint-config-react-app": "^5.0.0",
         "eslint-plugin-react-hooks": "^1.7.0",
+        "identity-obj-proxy": "^3.0.0",
+        "jest": "^24.8.0",
         "prettier": "^1.18.2"
     },
     "repository": {
