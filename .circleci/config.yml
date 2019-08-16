@@ -79,11 +79,17 @@ workflows:
     basic-workflow:
         jobs:
             - test
-
             - build:
                   requires:
                       - test
 
+    deploy-in-master:
+        jobs:
+            - build:
+                  filters:
+                      branches:
+                          only:
+                              - master
             - deploy-to-firebase:
                   requires:
                       - build
