@@ -1,0 +1,33 @@
+name: 'Continuous Integration'
+
+on:
+    pull_request:
+        branches:
+            - master
+    push:
+        branches:
+            - master
+
+jobs:
+    build_test:
+        name: 'Build and test'
+        strategy:
+            matrix:
+                node_version: [8, 10]
+                os: [ubuntu-18.04, windows-2019]
+
+        runs-on: ${{ matrix.os }}
+
+        steps:
+            - uses: actions/checkout@v1
+
+            - name: 'Use Node .js ${{ matrix.node_version }}'
+              uses: actions/setup-node@v1
+              with:
+                  version: ${{ matrix.node_version }}
+
+            - name: 'install yarn, build and test'
+              run: |
+                  npm install -g yarn
+                  yarn run build
+                  yarn run test
