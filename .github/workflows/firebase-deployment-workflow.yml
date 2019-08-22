@@ -1,0 +1,36 @@
+name: Firebase Deploy
+
+on:
+    pull_request:
+        branches:
+            - master
+    # push:
+    #     branches:
+    #         - master
+
+jobs:
+    firebase_deploy:
+        name: Build and deploy to firebase hosting
+        runs-on: windows-2019
+
+        steps:
+            - uses: actions/checkout@v1
+
+            - name: Set up node.js version:10.x
+              uses: actions/setup-node@v1
+              with:
+                  version: 10.x
+
+            - name: Install with yarn, build and test
+              env:
+                  CI: true
+                  FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
+              run: |
+                  npm install
+                  npm test
+              #  npm install -g yarn@1.17.3
+              #   yarn install
+              #    yarn run test
+              #  yarn global add firebase-tools
+              # yarn run build
+              #    firebase deploy --token=$FIREBASE_TOKEN
