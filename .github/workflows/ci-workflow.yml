@@ -15,7 +15,9 @@ jobs:
             - uses: actions/setup-node@v1
               with:
                   node-version: 10.x
-            - run: |
-                  yarn install
-                  yarn run test
-                  yarn run build
+            - run: yarn install
+            - run: yarn run test
+            - run: yarn run build
+            - run: yarn run firebase:deploy #create a package.json script
+              env:
+                  FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
