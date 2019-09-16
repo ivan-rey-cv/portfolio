@@ -1,15 +1,21 @@
 name: Continuous Integration
-on: [push]
+on:
+    push:
+        branches:
+            - '*' # matches every branch
+            - '*/*' # matches every branch containing a '/'
+            - '!master' # excludes master
 
 jobs:
     continuous-integration:
         name: CI
-        runs-on: ubuntu-latest
+        runs-on: windows-2019
         steps:
             - uses: actions/checkout@v1
             - uses: actions/setup-node@v1
               with:
                   node-version: 10.x
-            - run: yarn install
-            - run: yarn run build
-            - run: yarn run test
+            - run: |
+                  yarn install
+                  yarn run test
+                  yarn run build

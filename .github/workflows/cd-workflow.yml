@@ -1,0 +1,18 @@
+name: Continuous Deployment
+on:
+    push:
+        branches: master
+
+jobs:
+    continuous-delployment:
+        name: CD
+        runs-on: windows-2019
+        steps:
+            - uses: actions/checkout@v1
+            - uses: actions/setup-node@v1
+              with:
+                  node-version: 10.x
+            - run: yarn install
+            - run: yarn run test
+            - run: yarn run build
+            # deploy to firebase hosting
