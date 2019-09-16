@@ -18,6 +18,6 @@ jobs:
             - run: yarn install
             - run: yarn run test
             - run: yarn run build
-            - run: yarn run firebase:deploy #create a package.json script
+            - run: firebase deploy --token ${FIREBASE_TOKEN}
               env:
                   FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}

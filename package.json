@@ -38,8 +38,7 @@
         "develop": "gatsby develop",
         "start": "npm run develop",
         "format": "prettier --write \"src/**/*.js\"",
-        "test": "jest",
-        "firebase:deploy": "firebase deploy --token ${FIREBASE_TOKEN}"
+        "test": "jest"
     },
     "devDependencies": {
         "@testing-library/jest-dom": "^4.0.0",
