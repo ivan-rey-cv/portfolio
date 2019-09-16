@@ -1,5 +1,5 @@
 const React = require('react');
 
 exports.wrapRootElement = ({ element }) => {
-    return <>{element}</>;
+    return <BreakTest>{element}</BreakTest>;
 };
